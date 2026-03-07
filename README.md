@@ -1,4 +1,3 @@
-[README-game-streaming.md](https://github.com/user-attachments/files/25813419/README-game-streaming.md)
 # Game Streaming — Sunshine + Moonlight sur Linux
 
 Mise en place d'un setup de game streaming depuis mon PC sous EndeavourOS vers mon Samsung Galaxy Z Fold 6,
