@@ -1,21 +1,9 @@
 # Game Streaming — Sunshine + Moonlight sur Linux
 
-Mise en place d'un setup de game streaming depuis mon PC sous EndeavourOS vers mon Samsung Galaxy Z Fold 6,
-sur réseau local. Projet perso — juste pour voir si c'était faisable et m'amuser un peu.
+Mise en place d'un setup de game streaming depuis mon PC sous EndeavourOS (RTX 3050 Mobile) vers mon Samsung Galaxy Z Fold 6, sur réseau local. Projet perso — juste pour voir si c'était faisable.
 
 > La latence est correcte pour un usage casual, quelques déconnexions occasionnelles,
-> mais rien de bloquant. C'est pas du niveau compétitif, mais ça fonctionne.
-
----
-
-## Matériel
-
-| Rôle | Appareil |
-|---|---|
-| Serveur (host) | ASUS TUF Gaming A17 — EndeavourOS |
-| GPU | NVIDIA GeForce RTX 3050 Mobile |
-| Client | Samsung Galaxy Z Fold 6 |
-| Réseau | Wi-Fi local |
+> mais rien de bloquant.
 
 ---
 
@@ -36,15 +24,8 @@ Les deux communiquent sur le réseau local — pas besoin d'internet.
 
 ### Sunshine (serveur, côté PC)
 
-Disponible sur AUR :
-
 ```bash
 yay -S sunshine
-```
-
-Démarrage du service :
-
-```bash
 systemctl --user enable --now sunshine
 ```
 
@@ -53,14 +34,6 @@ L'interface de configuration est accessible via navigateur sur `https://localhos
 ### Moonlight (client, côté téléphone)
 
 Installé depuis le Play Store — Moonlight Game Streaming.
-
----
-
-## Configuration
-
-- Encoder : **NVENC** (NVIDIA) — meilleure qualité, encodage matériel
-- Résolution / FPS : selon le jeu, ajusté depuis l'interface Moonlight
-- Jeux streamés : bibliothèque Steam détectée automatiquement par Sunshine
 
 ---
 
@@ -78,14 +51,3 @@ Installé depuis le Play Store — Moonlight Game Streaming.
 - La différence entre encodage côté serveur et décodage côté client
 - Que Linux peut tout à fait servir de plateforme de streaming gaming, même avec un GPU hybride
 - Les bases du streaming réseau local — ports, protocoles RTP/RTSP
-
----
-
-## État actuel
-
-| Fonctionnalité | État |
-|---|---|
-| Streaming Steam | ✅ Fonctionnel |
-| Encodage NVENC | ✅ Fonctionnel |
-| Connexion Moonlight | ✅ Fonctionnel |
-| Stabilité réseau | ⚠️ Quelques déconnexions occasionnelles |
